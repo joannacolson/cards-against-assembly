@@ -1,0 +1,22 @@
+{
+    "name": "cards-against-assembly",
+    "version": "1.0.0",
+    "description": "## Objective",
+    "main": "index.js",
+    "scripts": {
+        "start": "node_modules/browser-sync/bin/browser-sync.js start --server . --files ."
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/joannacolson/cards-against-assembly.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/joannacolson/cards-against-assembly/issues"
+    },
+    "homepage": "https://github.com/joannacolson/cards-against-assembly#readme",
+    "dependencies": {
+        "browser-sync": "^2.18.8"
+    }
+}

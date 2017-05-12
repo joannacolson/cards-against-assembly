@@ -12,19 +12,23 @@
     <script src="js/app.js"></script>
     <script src="js/factories.js"></script>
     <script src="js/components/answerCards.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
 </head>
 
 <body ng-controller="CardsCtrl">
     <div class="container">
         <header class='navbar'>
+            <div>
+                <a href="/#/about/">About</a>
+                <a href="/#/">Play</a>
+                <a href="/#/">Subscribe</a>
+            </div>
             <h1 class='pull-left'>Cards Against Assembly</h1>
         </header>
         <button ng-click="newQuestion()" class="btn btn-lg btn-primary">Start Next Round</button>
         <div class="well">
             <h2>How many people are playing?</h2>
-            <!-- Let's make a number field and button so we can say how many players -->
             <input type="number" ng-model="numPlayers">
-            <button ng-click="setNumPlayers(numPlayers)" class="btn btn-lg btn-success">Set Number of Players</button>
         </div>
         <section id="cards" class='container-fluid'>
             <div class='row'>
@@ -35,15 +39,15 @@
                         <h6>Cards Against Assembly</h6>
                     </div>
                 </div>
-                <div class="col-sm-9">
-                    <!-- Answer Cards Get Rendered Here -->
-                    <answer-cards></answer-cards>
-                </div>
+                <!-- <div class="col-xs-9-sm-9-md-9-lg-9"> -->
+                <!-- Answer Cards Get Rendered Here -->
+                <answer-cards></answer-cards>
             </div>
-        </section>
-        <footer>
-            <p>Made with <span class='heart'>♥︎</span> at General Assembly</p>
-        </footer>
+    </div>
+    </section>
+    <footer>
+        <p>Made with <span class='heart'>♥︎</span> at General Assembly</p>
+    </footer>
     </div>
 </body>
 

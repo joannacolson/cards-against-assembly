@@ -10,6 +10,10 @@ function AnswerCardsController($scope, AnswersFactory) {
     var ac = this;
     var cards = AnswersFactory.getCards();
     ac.answerCards = shuffleAndLimit(cards, $scope.$parent.numPlayers);
+    $scope.$watch('$parent.numPlayers', function() {
+        //limit has changed
+        ac.answerCards = shuffleAndLimit(cards, $scope.$parent.numPlayers);
+    });
 }
 
 function shuffleAndLimit(cards, limit) {

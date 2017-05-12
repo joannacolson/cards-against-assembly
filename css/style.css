@@ -4,9 +4,10 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-.container {
+
+/*.container {
     margin: 4rem;
-}
+}*/
 
 header {
     border-bottom: 1px solid black;
@@ -16,12 +17,6 @@ header {
 
 header.navbar {
     border-radius: 0;
-}
-
-h1 {
-    font-weight: bold;
-    letter-spacing: -2px;
-    max-width: 100px;
 }
 
 h1:after,
@@ -85,34 +80,99 @@ footer .heart {
 
 /*==========Added Styles=======*/
 
+body {
+    background-color: #E4FFE6;
+}
+
 .btn {
     background-color: #D4FF00;
     color: black;
     margin: 1em;
     border-width: .2em;
     border-color: black;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.btn:hover {
+    background-color: black;
+    color: #D4FF00;
+    border: white;
+    font-weight: bold;
 }
 
 .well {
     background-color: #00D6DD;
-    border-width: .2em;
-    border-color: black;
+    border: none;
 }
 
 .answer-card {
-    min-width: 16rem;
-    max-width: 16rem;
-    min-height: 22rem;
-    max-height: 22rem;
-}
-
-.answer-card {
+    min-width: 24rem;
+    max-width: 24rem;
+    min-height: 32rem;
+    max-height: 32rem;
     margin: 1em 0;
 }
 
 .card {
-    min-width: 16rem;
-    max-width: 16rem;
-    min-height: 22rem;
-    max-height: 22rem;
+    min-width: 24rem;
+    max-width: 24rem;
+    min-height: 32rem;
+    max-height: 32rem;
+}
+
+#playbutton {
+    font-size: 1.5em;
+}
+
+.players {
+    background-color: black;
+    color: #E4FFE6;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 3px;
+}
+
+
+/*=====Media Query=====*/
+
+@media (max-width: 667px) {
+    body {
+        text-align: center;
+    }
+    h1 {
+        margin: 0 auto;
+        text-align: center;
+        font-weight: bold;
+        letter-spacing: -2px;
+        /*        max-width: 150px;
+*/
+    }
+    h2 {
+        font-size: 24px;
+    }
+    .answer-card {
+        min-width: 20rem;
+        max-width: 20rem;
+        min-height: 28rem;
+        max-height: 28rem;
+        margin: 0 auto 1rem;
+    }
+    .card {
+        min-width: 20rem;
+        max-width: 20rem;
+        min-height: 28rem;
+        max-height: 28rem;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 668px) {
+    h1 {
+        font-weight: bold;
+        letter-spacing: -2px;
+        max-width: 100px;
+        float: left;
+        /*font-size: 54px;*/
+    }
 }

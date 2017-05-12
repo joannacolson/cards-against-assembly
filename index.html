@@ -21,10 +21,8 @@
         </header>
         <button ng-click="newQuestion()" class="btn btn-lg btn-primary">Start Next Round</button>
         <div class="well">
-            <h2>How many people are playing?</h2>
-            <!-- Let's make a number field and button so we can say how many players -->
-            <input type="number" ng-model="numPlayers">
-            <button ng-click="setNumPlayers(numPlayers)" class="btn btn-lg btn-success">Set Number of Players</button>
+            <h2 class="">How many people are playing?</h2>
+            <input class="" type="number" ng-model="numPlayers" min="1" max="6">
         </div>
         <section id="cards" class='container-fluid'>
             <div class='row'>

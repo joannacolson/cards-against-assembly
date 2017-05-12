@@ -16,12 +16,11 @@
 </head>
 
 <body ng-controller="CardsCtrl">
-    <div class="container">
+    <div class="container-fluid">
         <header class='navbar'>
             <div>
                 <a href="/#/about/">About</a>
                 <a href="/#/">Play</a>
-                <a href="/#/">Subscribe</a>
             </div>
             <h1 class='pull-left'>Cards Against Assembly</h1>
         </header>
@@ -32,22 +31,22 @@
         </div>
         <section id="cards" class='container-fluid'>
             <div class='row'>
-                <div class='col-sm-3'>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <h2>The Question:</h2>
-                    <div class='card'>
+                    <div class=' card '>
                         <h4 class="card-title">{{ displayCard }}</h4>
                         <h6>Cards Against Assembly</h6>
                     </div>
                 </div>
-                <!-- <div class="col-xs-9-sm-9-md-9-lg-9"> -->
-                <!-- Answer Cards Get Rendered Here -->
-                <answer-cards></answer-cards>
+                <div class="col-xs-12-sm-12-md-3-lg-3">
+                    <!-- Answer Cards Get Rendered Here -->
+                    <answer-cards></answer-cards>
+                </div>
             </div>
-    </div>
-    </section>
-    <footer>
-        <p>Made with <span class='heart'>♥︎</span> at General Assembly</p>
-    </footer>
+        </section>
+        <footer>
+            <p>Made with <span class='heart '>♥︎</span> at General Assembly</p>
+        </footer>
     </div>
 </body>
 

@@ -1,4 +1,4 @@
-angular.module("CardsAgainstAssembly")
+angular.module('CardsAgainstAssembly')
     .component("answerCards", {
         templateUrl: "js/components/views/answerCards.html",
         controller: ["$scope", "AnswersFactory", AnswerCardsController],

@@ -19,10 +19,12 @@
         <header class='navbar'>
             <h1 class='pull-left'>Cards Against Assembly</h1>
         </header>
-        <button ng-click="newQuestion()" class="btn btn-lg btn-primary">Start Next Round</button>
         <div class="well">
-            <h2 class="">How many people are playing?</h2>
-            <input class="" type="number" ng-model="numPlayers" min="1" max="6">
+            <button ng-click="newQuestion()" class="btn btn-sm btn-primary">Start Next Round</button>
+        </div>
+        <div class="well">
+            <h2>How many people are playing?</h2>
+            <input type="number" ng-model="numPlayers" min="1" max="6">
         </div>
         <section id="cards" class='container-fluid'>
             <div class='row'>

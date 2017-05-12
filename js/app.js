@@ -7,7 +7,7 @@ angular.module('CardsAgainstAssembly', ['CardsApp'])
             $scope.displayCard = questionCards[pickCardIndex(questionCards.length)].question;
         };
 
-        // $scope.newQuestion();
+        $scope.newQuestion();
     }]);
 
 function pickCardIndex(deckSize) {

@@ -1,44 +1,50 @@
 <!DOCTYPE html>
 <html lang='en' ng-app="CardsAgainstAssembly">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Cards Against Assembly™</title>
-    <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
     <script src="js/app.js"></script>
-  </head>
-  <body ng-controller="CardsCtrl">
+    <script src="js/factories.js"></script>
+    <script src="js/components/answerCards.js"></script>
+</head>
+
+<body ng-controller="CardsCtrl">
     <div class="container">
-      <header class='navbar'>
-        <h1 class='pull-left'>Cards Against Assembly</h1>
-      </header>
-
-      <h2>How many people are playing?</h2>
-      <!-- Let's make a number field and button so we can say how many players -->
-
-      <section id="cards" class='container-fluid'>
-        <div class='row'>
-
-          <div class='col-sm-3'>
-            <h2>The Question:</h2>
-            <div class='card'>
-              <h4 class="card-title">Black Card Text Goes Here</h4>
-              <h6>Cards Against Assembly</h6>
-            </div>
-          </div>
-
-          <div class="col-sm-9">
-            <!-- Answer Cards Get Rendered Here -->
-          </div>
-
+        <header class='navbar'>
+            <h1 class='pull-left'>Cards Against Assembly</h1>
+        </header>
+        <button ng-click="newQuestion()" class="btn btn-lg btn-primary">Start Next Round</button>
+        <div class="well">
+            <h2>How many people are playing?</h2>
+            <!-- Let's make a number field and button so we can say how many players -->
+            <input type="number" ng-model="numPlayers">
+            <button ng-click="setNumPlayers(numPlayers)" class="btn btn-lg btn-success">Set Number of Players</button>
         </div>
-      </section>
-
-      <footer>
-        <p>Made with <span class='heart'>♥︎</span> at General Assembly</p>
-      </footer>
+        <section id="cards" class='container-fluid'>
+            <div class='row'>
+                <div class='col-sm-3'>
+                    <h2>The Question:</h2>
+                    <div class='card'>
+                        <h4 class="card-title">{{ displayCard }}</h4>
+                        <h6>Cards Against Assembly</h6>
+                    </div>
+                </div>
+                <div class="col-sm-9">
+                    <!-- Answer Cards Get Rendered Here -->
+                    <answer-cards></answer-cards>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p>Made with <span class='heart'>♥︎</span> at General Assembly</p>
+        </footer>
     </div>
-  </body>
+</body>
+
 </html>
